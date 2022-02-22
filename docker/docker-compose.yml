@@ -1,0 +1,13 @@
+version: '3'
+services:
+  test-mysql:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    command:
+      --init-file /data/application/initdb.sql
+    volumes:
+      - ./db/initdb.sql:/data/application/initdb.sql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+      MYSQL_DATABASE: mysql

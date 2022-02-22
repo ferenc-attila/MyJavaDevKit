@@ -1,0 +1,15 @@
+USE mysql;
+
+CREATE SCHEMA IF NOT EXISTS `testdb`
+DEFAULT CHARACTER SET utf8
+DEFAULT COLLATE utf8_hungarian_ci;
+
+CREATE USER 'testuser'@'%'
+IDENTIFIED BY 'testpassword';
+
+GRANT ALL PRIVILEGES
+ON *.*
+TO 'testuser'@'%'
+WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;

@@ -1,0 +1,6 @@
+CREATE TABLE `test` (
+id BIGINT AUTO_INCREMENT,
+`date` DATE,
+description VARCHAR(255),
+CONSTRAINT pk_test PRIMARY KEY(id)
+);
